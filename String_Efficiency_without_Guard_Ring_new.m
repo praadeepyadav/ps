@@ -1,0 +1,13 @@
+clear all;clc;
+fprintf('Soham Kundu 20192025\n');
+fprintf('to find string efficiency\n');
+fprintf('input parameter\n');
+k=input('capacitance ratio =');
+V=input(' line voltage(kV) =');
+v = V/(sqrt(3));
+v1 = v/((1+k)*(3+k));
+v2 = v1*(1+k);
+v3 = v1*(1+(3*k)+(k*k));
+string_efficiency = ((v1+v2+v3)*100)/(3*v3);
+fprintf('v1= %f kV \n v2= %f kV \n v3= %f kV \n',v1,v2,v3);
+fprintf('string efficiency= %f\n',string_efficiency);
